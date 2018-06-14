@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: zchq88
+    url: jdbc:mysql:// 192.168.108.220:3306/zchq88
+  jpa:
+    show-sql: true
+server:
+  port: 3000
+logging:
+  file: ./log/zchq88.log
