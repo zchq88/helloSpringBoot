@@ -6,6 +6,8 @@ import com.zchq88.springboot.Service.CategoryService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -40,6 +42,11 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public List<ProductCategory> findAll() {
         return dao.findAll();
+    }
+
+    @Override
+    public Page<ProductCategory> findAll(Pageable page) {
+        return dao.findAll(page);
     }
 
     @Override
